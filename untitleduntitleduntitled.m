@@ -1,9 +1,9 @@
-fileFolder=fullfile('/Volumes/Others/Final_project');
+fileFolder=fullfile('/Volumes/Others/2_temporal_ICA_output');
 dirOutput=dir(fullfile(fileFolder,'P*'));
-dir_pre='/Volumes/Others/Final_project';
-
-for i = 1:35
-mkdir([dir_pre, '/', dirOutput(i).name, '/', 'preprocess'])
+dir_pre='/Volumes/Others/2_temporal_ICA_output';
+%%
+for i = 1:34
+    mkdir([dir_pre, '/', dirOutput(i).name, '/', 'after_motion_correction'])
 end
 
 %%
@@ -11,8 +11,8 @@ fileFolder=fullfile('/Volumes/Others/Final_project');
 dirOutput=dir(fullfile(fileFolder,'P*'));
 dir_pre='/Volumes/Others/2_spatial_ICA_output';
 
-for i = 1:35
-mkdir([dir_pre, '/', dirOutput(i).name, '/', 'after_motion_correction/results'])
+for i = 2:35
+    rmdir([dir_pre, '/', dirOutput(i).name, '/', 'after_motion_correction/results/'])
 end
 
 %%
